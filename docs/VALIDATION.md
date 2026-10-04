@@ -10,6 +10,7 @@
 - Ruff检查通过，Skill结构验证通过。
 - wheel和源码分发包构建成功；wheel含提取代码、Skill及上游MIT许可证。
 - 第二个干净虚拟环境从wheel安装成功，依赖检查通过；从site-packages运行文本提取、Skill安装、清理预览及同一套离线测试。
+- GitHub首轮CI三个平台全部通过：[运行记录](https://github.com/zswwwww/chinese-content-to-notebooklm/actions/runs/37213032240)。Windows、Ubuntu、macOS均完成Python 3.12安装、单元测试、Ruff、构建和命令入口检查。
 
 ## 实际联网验证
 
@@ -27,7 +28,7 @@
 - 公众号目前通过模拟HTTP页面验证正文提取与阻拦处理，尚未完成真实公众号链接到NotebookLM的端到端验收。
 - PDF使用pypdf文字层，已验证接口；不提供扫描件OCR。
 - 分P、短链接和稍后再看主要验证输入与参数处理；不能把它们的离线测试等同于每一种实际视频的联网验收。
-- Windows为实际使用平台。Linux/macOS由发布后的CI执行离线测试；没有在这两个平台做真实账号与音频转写验收。
+- Windows为实际使用平台。Linux/macOS的CI离线检查已通过；没有在这两个平台做真实账号与音频转写验收。
 - 音频转写未逐字校对，尤其人名、书名可能识别错误；不会分析视频画面。NotebookLM总结仍以来源内容为边界，不能替代独立事实核查。
 - 远端请求结果不确定时停止等待人工核对；换输出根目录会产生新的本地状态。
 

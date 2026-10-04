@@ -1,5 +1,7 @@
 # Chinese Content to NotebookLM
 
+[![tests](https://github.com/zswwwww/chinese-content-to-notebooklm/actions/workflows/tests.yml/badge.svg)](https://github.com/zswwwww/chinese-content-to-notebooklm/actions/workflows/tests.yml)
+
 把 **B站视频、微信公众号文章、本地 MD/TXT/PDF** 提取成文本，导入你自己的 NotebookLM，生成带来源引用的中文总结。提供可安装的 Python 命令和 Codex Skill，支持保存进度、音频缓存复用及过期缓存清理。
 
 这是一个连接项目：提取能力来自 [ChubbySkills](https://github.com/chubbyguan/chubbyskills)，NotebookLM 操作使用 [notebooklm-mcp-cli](https://github.com/jacob-bd/gemini-notebook-mcp-cli)。连接、配置、状态保存和清理由本项目实现。上游来源和本地修改见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
