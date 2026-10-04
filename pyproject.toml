@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chinese-content-to-notebooklm"
+version = "0.1.0"
+description = "Bilibili and WeChat content to NotebookLM, with resumable imports and audio cache cleanup"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md", "src/notebooklm_combo/_vendor/chubbyskills/LICENSE"]
+authors = [{name = "zswwwww"}]
+dependencies = [
+  "notebooklm-mcp-cli==0.15.1",
+  "yt-dlp==2026.8.19",
+  "httpx>=0.28,<0.29",
+  "filelock>=3.16,<5",
+  "beautifulsoup4>=4.12,<5",
+]
+
+[project.optional-dependencies]
+asr = ["funasr==1.4.16", "modelscope==1.40.1", "torch>=2.5,<3", "torchaudio>=2.5,<3"]
+pdf = ["pypdf>=5,<7"]
+dev = ["ruff>=0.11,<1", "build>=1,<2", "PyYAML>=6,<7"]
+
+[project.scripts]
+chinese-notebooklm = "notebooklm_combo.cli:main"
+
+[project.urls]
+Repository = "https://github.com/zswwwww/chinese-content-to-notebooklm"
+Issues = "https://github.com/zswwwww/chinese-content-to-notebooklm/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"notebooklm_combo._vendor.chubbyskills" = ["LICENSE"]
+"notebooklm_combo" = ["skills/chinese-content-to-notebooklm/SKILL.md"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]
+ignore = ["E501"]

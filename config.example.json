@@ -1,0 +1,8 @@
+{
+  "cache_dir": null,
+  "retention_days": 7,
+  "bilibili_proxy": "",
+  "notebooklm_proxy": null,
+  "ffmpeg_dir": null,
+  "nlm_executable": null
+}
